@@ -4,7 +4,7 @@ const playSheesh = urlParams.get("sheesh");
 const enhance = ()=>{
     // URL Progressive enhancement from https://github.com/jonroig/emojiurlifier
     var emojiurlifier=function(emojiDomain,standardDomain){var wl=window.location;var useEmojiDomain=/^((?!chrome).)*safari/i.test(navigator.userAgent);if(navigator.userAgent.indexOf("CriOS")>-1){useEmojiDomain=false}var currentUrl=wl.protocol+"//"+wl.hostname;var outputUrl=useEmojiDomain?emojiDomain:standardDomain;if(currentUrl===outputUrl){return}outputUrl+=wl.pathname;outputUrl+=wl.search;window.location=outputUrl};
-    //emojiurlifier("https://xn--ps9haaa.ml", "https://sheeeesh.ml");
+    emojiurlifier("https://xn--ps9haaa.ml", "https://sheeeesh.ml");
 }
 
 if (!destination) {
