@@ -40,8 +40,9 @@ if (!destination) {
 
     const setResult = ()=>{
         if(url.value === "") return;
-        result.textContent = `https://${emoji.checked ? "xn--ps9haaa" : "sheeeesh.ml"}.ml/?d=${url.value}${play.checked ? "&sheesh=SHEESH" : ""}`;
+        result.textContent = `https://${emoji.checked ? "xn--ps9haaa" : "sheeeesh"}.ml/?d=${url.value}${play.checked ? "&sheesh=SHEESH" : ""}`;
         preview.style.display = "inline-block";
+        preview.href = result.textContent;
 
         // resize the textarea automatically
         // this solution is from https://stackoverflow.com/a/25621277
