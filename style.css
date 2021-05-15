@@ -5,9 +5,15 @@ body {
     font-style: italic;
 }
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 1rem;
     z-index: 3;
+}
+@media only screen and (max-width: 600px) {
+    footer {
+        position: static;
+        margin-top: 2rem;
+    }
 }
 a {
     color: rgb(13, 183, 212);
