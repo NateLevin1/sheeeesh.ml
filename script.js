@@ -1,8 +1,15 @@
 const urlParams = new URLSearchParams(window.location.search);
 const destination = urlParams.get('d');
 const playSheesh = urlParams.get("sheesh");
+const enhance = ()=>{
+    // URL Progressive enhancement from https://github.com/jonroig/emojiurlifier
+    var emojiurlifier=function(emojiDomain,standardDomain){var wl=window.location;var useEmojiDomain=/^((?!chrome).)*safari/i.test(navigator.userAgent);if(navigator.userAgent.indexOf("CriOS")>-1){useEmojiDomain=false}var currentUrl=wl.protocol+"//"+wl.hostname;var outputUrl=useEmojiDomain?emojiDomain:standardDomain;if(currentUrl===outputUrl){return}outputUrl+=wl.pathname;outputUrl+=wl.search;window.location=outputUrl};
+    emojiurlifier("https://xn--ps9haaa.ml", "https://sheeeesh.ml");
+}
 
 if (!destination) {
+    enhance();
+
     document.title = "sheeesh link forwarder 🥶🥶🥶";
     const counter = document.getElementById("sh-counter")
     let sheeshes = 0;
@@ -40,9 +47,14 @@ if (!destination) {
 
     const setResult = ()=>{
         if(url.value === "") return;
-        result.textContent = `https://${emoji.checked ? "xn--ps9haaa" : "sheeeesh"}.ml/?d=${url.value}${play.checked ? "&sheesh=SHEESH" : ""}`;
-        preview.style.display = "inline-block";
-        preview.href = result.textContent;
+        result.textContent = `https://${emoji.checked ? "🥶🥶🥶🥶" : "sheeeesh"}.ml/?d=${url.value}${play.checked ? "&sheesh=SHEEESH" : ""}`;
+        try {
+            new URL(url.value);
+            preview.style.display = "inline-block";
+            preview.href = result.textContent;
+        } catch(_) {
+            // invalid url, dont show preview
+        }
 
         // resize the textarea automatically
         // this solution is from https://stackoverflow.com/a/25621277
@@ -55,6 +67,7 @@ if (!destination) {
     emoji.oninput = setResult;
 } else {
     if(playSheesh !== null) {
+        enhance();
         const modal = document.getElementById("modal");
         modal.style.display = "flex";
         modal.onclick = ()=>{
