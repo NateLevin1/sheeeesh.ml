@@ -1,0 +1,95 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.sheesh {
+    font-style: italic;
+}
+footer {
+    position: absolute;
+    bottom: 1rem;
+    z-index: 3;
+}
+a {
+    color: rgb(13, 183, 212);
+    font-weight: bold;
+}
+a:visited, #name {
+    color: rgb(15, 88, 224);
+}
+button {
+    outline: none;
+    background-color: rgb(45, 158, 251);
+    color: white;
+    border: none;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.35);
+    border-radius: 4px;
+    padding: 5px 12px;
+}
+button:active {
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+}
+#sh-btn {
+    margin-top: 2.5rem;
+    padding: 0.4rem;
+    width: max(200px, 4rem);
+    font-size: 1rem;
+    display: block;
+}
+button:focus-visible {
+    outline: 2px solid rgb(13, 183, 212);
+}
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+input {
+    display: block;
+    margin-bottom: 20px;
+}
+input:invalid {
+    border: 2px solid red;
+}
+#result {
+    resize: none;
+    font-family: inherit;
+    width: min(200px, 100%);
+}
+input[type=checkbox] {
+    display: inline-block;
+}
+textarea {
+    display: block;
+    margin-bottom: 10px;
+    overflow-y: hidden;
+}
+#copy-result {
+    transition: background-color 0.2s, color 0.2s, width 0.2s;
+}
+section h1 {
+    margin-top: 2.5rem;
+    font-size: 1.2rem;
+}
+#modal {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    background-color:rgb(145, 239, 255);
+    cursor: pointer;
+}
+#modal p {
+    font-size: 4rem;
+    padding: 0;
+}
+#source {
+    margin-left: 5px;
+    font-size: 0.8rem;
+    color: rgb(13, 183, 212);
+}
+#url {
+    width: min(200px, 90vw);
+}
